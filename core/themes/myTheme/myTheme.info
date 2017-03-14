@@ -1,0 +1,5 @@
+name = My Theme
+description = My theme is amazing
+core = 7.x
+engine = phptemplate
+base theme = bartik

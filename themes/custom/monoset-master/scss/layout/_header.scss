@@ -1,0 +1,105 @@
+/**
+*
+* Header
+*
+**/
+
+.header-main {
+  position: relative;
+  min-height: 3.8rem;
+  border-bottom: solid 1px $grey-200;
+  @include breakpoint(md) {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    padding: 1rem 0;
+    background: $white;
+  }
+  // Front Page Header Tweaks
+  > .path-frontpage & {
+    border: none;
+    background: none;
+    transition: all .5s ease-in-out;
+    .menu li a {
+      color: $grey-600;
+    }
+  }
+  &.sticky {
+    background: rgba($white, 0.9);
+    box-shadow: 0 2px 5px rgba($black, 0.25);
+    .menu li a {
+      color: $grey-500;
+    }
+  }
+}
+
+.logo-svg {
+  fill: $grey-500;
+  transition: all .3s;
+  &:hover {
+    fill: $blue;
+  }
+}
+
+div[class$="branding"] {
+  display: block;
+  text-align: center;
+  @include breakpoint(md) {
+    text-align: initial;
+    display: inline-block;
+  }
+}
+
+.site-logo {
+  float: initial;
+  @include breakpoint(md) {
+    float: left;
+  }
+}
+
+.site-name,
+.site-slogan {
+  display: none;
+  @include breakpoint(md) {
+    display: table;
+    padding: 1rem 0 0 1rem;
+    float: right;
+    clear: right;
+  }
+}
+
+.site-slogan {
+  font-style: oblique;
+}
+
+.header-main nav {
+  display: inline;
+}
+
+.header-main .menu {
+  display: none;
+  float: initial;
+  @include breakpoint(md) {
+    display: block;
+    margin: 3px 0 0 1.5rem;
+    float: right;
+  }
+}
+
+.header-main .menu li {
+  display: inline;
+  margin: 0  1.5rem 0 0;
+  &:last-child {
+    margin: 0;
+  }
+  a {
+    display: inline-block;
+    @include font-size(14px);
+    font-weight: $medium;
+    text-transform: uppercase;
+    color: $grey-500;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
